@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotam Mentörlük | YKS & LGS Derece Öğrencileri ile Koçluk</title>
+    
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/jpeg" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" type="image/jpeg" sizes="64x64" href="images/favicon-64x64 (1).png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180x180 (1).png">
+    <link rel="shortcut icon" href="images/favicon-32x32.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8P52C60PYJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8P52C60PYJ');
+    </script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.jpg" alt="Rotam Mentörlük Logo" style="width: 80px; height: 60px; margin-right: 15px; border-radius: 8px; object-fit: cover;">
+                Rotam Mentörlük
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mentors">Mentörlerimiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#packages">Paketlerimiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Yorumlar ve Başarılar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container">
+            <h1>Doğru Rota, Doğru Gelecek</h1>
+            <p>YKS ve LGS'ye hazırlık sürecinde profesyonel koçluk desteği ile potansiyelinizi keşfedin.</p>
+            <div>
+                <a href="#packages" class="btn btn-primary-custom">Paketleri İncele</a>
+                <a href="#contact" class="btn btn-secondary-custom ms-2">Ücretsiz Ön Görüşme</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="mentors" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Mentörlerimizle Tanışın</h2>
+            <div class="mentors-container">
+                <button class="mentor-nav prev" onclick="changeMentor(-1)">‹</button>
+                <button class="mentor-nav next" onclick="changeMentor(1)">›</button>
+                
+                <div class="mentors-wrapper" id="mentorsWrapper">
+                    <div class="mentor-card">
+                        <img src="images/fatih-avatar.jpg" alt="Mehmet Fatih Alkan">
+                        <h4>Mehmet Fatih Alkan</h4>
+                        <p class="text-muted">Boğaziçi Üniversitesi - PDR</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mentor1Modal">
+                            Detaylı Bilgi
+                        </button>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="images/halil-avatar.jpg" alt="Halil İbrahim Şimşek">
+                        <h4>Halil İbrahim Şimşek</h4>
+                        <p class="text-muted">Bursa Teknik Üni. - Yapay Zeka Müh.</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mentor2Modal">
+                            Detaylı Bilgi
+                        </button>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="images/abdülhalik-avatar.png" alt="Abdülhalik Say">
+                        <h4>Abdülhalik Say</h4>
+                        <p class="text-muted">Eğitim Koçu</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mentor3Modal">
+                            Detaylı Bilgi
+                        </button>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="images/nazile-avatar.jpg" alt="Nazile Akkaya">
+                        <h4>Nazile Akkaya</h4>
+                        <p class="text-muted">Karabük Üniversitesi - Tıp</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mentor4Modal">
+                            Detaylı Bilgi
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mentor-dots">
+                    <span class="mentor-dot active" onclick="currentMentor(1)"></span>
+                    <span class="mentor-dot" onclick="currentMentor(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+          <div class="row g-4">
+              <div class="col-lg-4 d-flex align-items-stretch">
+                  <div class="about-us-box">
+                      <i class="fas fa-book-reader"></i>
+                      <h3>Hikayemiz</h3>
+                      <p>Öğrencilerin sınav yolculuğunda onlara en doğru ve pozitif desteği sağlamak amacıyla yola çıktık. Kendi deneyimlerimizden yola çıkarak, her öğrencinin özel olduğunu biliyor ve potansiyellerini en üst seviyeye çıkarmayı hedefliyoruz.</p>
+                  </div>
+              </div>
+              <div class="col-lg-4 d-flex align-items-stretch">
+                  <div class="about-us-box">
+                      <i class="fas fa-bullseye"></i>
+                      <h3>Misyonumuz</h3>
+                      <p>Sınava hazırlanan her öğrenciye özel bire bir koçluk sistemi ile haftalık/günlük çalışma planları oluşturarak; deneme analizleri, eksik konu giderme çalışmaları ve sınav yolculuğunu pozitif motivasyonla yürütmek.</p>
+                  </div>
+              </div>
+              <div class="col-lg-4 d-flex align-items-stretch">
+                  <div class="about-us-box">
+                      <i class="fas fa-eye"></i>
+                      <h3>Vizyonumuz</h3>
+                      <p>Türkiye'nin dört bir yanından sınava hazırlanan öğrencilerimizin akademik potansiyellerini keşfetmesini ve görmesini sağlayarak, zorlu geçeceğini düşündüğü sınav sürecini stres ve kaygı ortamından çıkararak pozitif, verimli ve motive edici bir yolculuğa dönüştürmek.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="countdown">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h3 class="mb-3">LGS 2026'ya Kalan Süre</h3>
+                    <div class="row">
+                        <div class="col-3"><div id="lgs-days" class="countdown-item">00</div><div class="countdown-label">Gün</div></div>
+                        <div class="col-3"><div id="lgs-hours" class="countdown-item">00</div><div class="countdown-label">Saat</div></div>
+                        <div class="col-3"><div id="lgs-minutes" class="countdown-item">00</div><div class="countdown-label">Dakika</div></div>
+                        <div class="col-3"><div id="lgs-seconds" class="countdown-item">00</div><div class="countdown-label">Saniye</div></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-3">YKS 2026'ya Kalan Süre</h3>
+                     <div class="row">
+                        <div class="col-3"><div id="yks-days" class="countdown-item">00</div><div class="countdown-label">Gün</div></div>
+                        <div class="col-3"><div id="yks-hours" class="countdown-item">00</div><div class="countdown-label">Saat</div></div>
+                        <div class="col-3"><div id="yks-minutes" class="countdown-item">00</div><div class="countdown-label">Dakika</div></div>
+                        <div class="col-3"><div id="yks-seconds" class="countdown-item">00</div><div class="countdown-label">Saniye</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Koçluk Paketlerimiz</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="package-card">
+                        <h3 class="package-name">LGS Paketi</h3>
+                        <p>Ortaokulun son yılında hedeflerine odaklan!</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Kişiye özel koçla, birebir takip sistemi</li>
+                            <li><i class="fas fa-check-circle"></i>Günlük ve haftalık ders çalışma programları</li>
+                            <li><i class="fas fa-check-circle"></i>Konu takip çalışma raporları</li>
+                            <li><i class="fas fa-check-circle"></i>Detaylı analiz ve raporlama çalışmaları</li>
+                            <li><i class="fas fa-check-circle"></i>Gün içi program takibi</li>
+                            <li><i class="fas fa-check-circle"></i>Günlük rapor alma</li>
+                            <li><i class="fas fa-check-circle"></i>Aylık veli görüşmeleri</li>
+                        </ul>
+                        <div class="price">₺2500 <span style="font-size: 1rem;">/ Aylık</span></div>
+                        <a href="#contact" class="btn btn-primary-custom">Bilgi Al</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="package-card">
+                        <h3 class="package-name">YKS Paketi</h3>
+                        <p>Üniversite hayallerine giden yolda en büyük destekçin!</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Kişiye özel derece öğrencisi mentör</li>
+                            <li><i class="fas fa-check-circle"></i>Günlük ve haftalık ders çalışma programı hazırlama seansı</li>
+                            <li><i class="fas fa-check-circle"></i>Detaylı analiz ve raporlama çalışmaları</li>
+                            <li><i class="fas fa-check-circle"></i>Gün içi program takibi</li>
+                            <li><i class="fas fa-check-circle"></i>Günlük rapor alma</li>
+                            <li><i class="fas fa-check-circle"></i>Aylık veli görüşmesi</li>
+                        </ul>
+                        <div class="price">₺2000 <span style="font-size: 1rem;">/ Aylık</span></div>
+                        <a href="#contact" class="btn btn-primary-custom">Bilgi Al</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="package-card">
+                        <h3 class="package-name">9, 10, 11. Sınıf</h3>
+                        <p>Lise hayatını planlı ve verimli geçir, YKS'ye önde başla!</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Kişiye özel derece öğrencisi ile birebir takip sistemi</li>
+                            <li><i class="fas fa-check-circle"></i>Haftalık ders çalışma programları</li>
+                            <li><i class="fas fa-check-circle"></i>Konu takip çalışma raporları</li>
+                            <li><i class="fas fa-check-circle"></i>Detaylı analiz ve raporlama çalışmaları</li>
+                            <li><i class="fas fa-check-circle"></i>Günlük rapor alma</li>
+                            <li><i class="fas fa-check-circle"></i>Aylık veli görüşmeleri</li>
+                        </ul>
+                        <div class="price">₺1799 <span style="font-size: 1rem;">/ Aylık</span></div>
+                        <a href="#contact" class="btn btn-primary-custom">Bilgi Al</a>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="package-card">
+                        <h3 class="package-name">6. ve 7. Sınıf</h3>
+                        <p>Sağlam temeller atarak geleceğe hazırlan!</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Analiz ve raporlama çalışmaları</li>
+                            <li><i class="fas fa-check-circle"></i>Gün içi program takibi</li>
+                            <li><i class="fas fa-check-circle"></i>Günlük rapor alma</li>
+                            <li><i class="fas fa-check-circle"></i>Aylık veli görüşmeleri</li>
+                        </ul>
+                        <div class="price">₺1799 <span style="font-size: 1rem;">/ Aylık</span></div>
+                        <a href="#contact" class="btn btn-primary-custom">Bilgi Al</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Yorumlar ve Başarılarımız</h2>
+            <div class="testimonials-container">
+                <button class="carousel-nav prev" onclick="changeTestimonial(-1)">‹</button>
+                <button class="carousel-nav next" onclick="changeTestimonial(1)">›</button>
+                
+                <div class="testimonials-wrapper" id="testimonialsWrapper">
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"2025 YKS sınavına hazırlanırken hocamızdan çok destek aldık ve sınav sürecimizde bizlere çok yardımcı oldu. Başarı ve sabır sürecinde bizleri yönlendirmesi çok mutlu etti ve şu an kendisiyle çalışmanın ne kadar doğru olduğunu anladık. Kendisine teşekkür ederiz."</p>
+                        <p class="student-name">- Kemal Kolka (Veli)</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"2022 LGS sürecinde koçluk aldım. Ve süreçte çok güzel ilerledim. Uzun maratonda ilerleyebilmek her öğrenci için zor olsada benim yolum kolaylaştı ve istediğim hedefe ulaştım."</p>
+                        <p class="student-name">- Yaşar Magat (Öğrenci)</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"Sınav sürecim çok yoğun ve stresli geçerken sizlerle çok güzel bir yolculuğumuz oldu ve istediğim hedefe ulaştım. Her an desteğini hissettim ve başarıya ulaştım."</p>
+                        <p class="student-name">- Muhammet Kaan Hançer (Öğrenci)</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"Sınavın aslında zor olmadığını ve benim hocamla sınavı kolaylaştırdığımızı bire bir gördüm. Bu süreçte çok büyük destek aldım ve ilerleyen zamanlarda yine çalışmaktan memnun olacağım."</p>
+                        <p class="student-name">- Süleyman Kolka (Öğrenci)</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"Sınav sürecinde her an bizlere psikolojik destek veren hocamıza ve zorlu tercih döneminde bizlere yardımcı olan herkese teşekkür ederim zorlu bir yolculuğu kolaylaştırdılar."</p>
+                        <p class="student-name">- Yunus Zeyrek (Veli)</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"Bir öğretmen olarak sınav sürecinin aslında daha zorlu bir süreç olduğunu görmüş olduk. Ama kolaylaştıran bir hocamız ve hedeflerimizi hızlı ilerleme sürecimiz oldu."</p>
+                        <p class="student-name">- Merve Göktürk (Veli)</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="carousel-dot" onclick="currentTestimonial(2)"></span>
+                    <span class="carousel-dot" onclick="currentTestimonial(3)"></span>
+                    <span class="carousel-dot" onclick="currentTestimonial(4)"></span>
+                    <span class="carousel-dot" onclick="currentTestimonial(5)"></span>
+                    <span class="carousel-dot" onclick="currentTestimonial(6)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">İletişime Geçin</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <p class="text-center mb-4">Ücretsiz ön görüşme veya paketlerimiz hakkında detaylı bilgi almak için formu doldurabilirsiniz.</p>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3"><input type="text" class="form-control" id="fullName" placeholder="Adınız Soyadınız" required></div>
+                                <div class="col-md-6 mb-3"><input type="email" class="form-control" id="email" placeholder="E-posta Adresiniz" required></div>
+                            </div>
+                            <div class="mb-3"><input type="text" class="form-control" id="subject" placeholder="Konu" required></div>
+                            <div class="mb-3"><textarea class="form-control" id="message" rows="5" placeholder="Mesajınız" required></textarea></div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary-custom">WhatsApp'a Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rotam Mentörlük. Tüm Hakları Saklıdır.</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/rotammentorluk" target="_blank"><i class="fab fa-instagram"></i></a>
+             </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905523472917" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="modal fade" id="mentor1Modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mehmet Fatih Alkan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Merhaba,ben mentor Mehmet Fatih. Boğaziçi PDR öğrencisiyim. 2025’te Yks eşit ağırlıkta 2332. oldum. Her öğrencinin farklı kişisel özelliklerinin olduğunun bilincinde olarak size uygun planlamayı en iyi şekilde bulmanıza ve uygulamanıza destek olmaya çalışacağım. Süreci beraber ilerletip en verimli şekilde geçirerek istediğiniz sonuca ulaşmanız için destekçiniz olacağım. Sınav sürecinde bilmeniz gereken püf noktaları aktararak her konu ve soru tipini öğrenmen için çalışacağız.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="mentor2Modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Halil İbrahim Şimşek</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Merhaba, ben Halil İbrahim Şimşek.Bursa Teknik Üniversitesi’nde Yapay Zeka ve Makine Öğrenmesi bölümünde eğitimime devam ediyorum. 2024 YKS’de 44.536 sıralama elde ederek bu bölüme yerleştim.Ben de sizler gibi sınav sürecinden geçtim; zorlukları, motivasyon kayıplarını ve hedeflere ulaşma heyecanını yaşadım. Bu süreçte doğru planlama, istikrarlı çalışma ve kararlılığın başarıya giden yolda ne kadar önemli olduğunu kendi deneyimlerimle gördüm.Mentörlük sürecinde amacım, yalnızca akademik destek vermek değil; aynı zamanda bu yolda karşılaşabileceğiniz engelleri aşmanızda, doğru stratejiler geliştirmenizde ve motivasyonunuzu korumanızda yanınızda olmak. Hep birlikte, hem hedeflerinize ulaşmanız hem de kendinizi daha iyi tanımanız için çalışacağız.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="mentor3Modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Abdülhalik Say</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Merhaba Ben Öğrenci Koçu Abdülhalik. Erciyes Üniversitesi Sosyoloji bölümünden mezun oldum. Sınava hazırlanan öğrencilerimle motivasyon artırma, çevrenin ve ailenin sınav sürecine etkisi, negatif sonuçlar yaşadığımız zaman pozitife nasıl çevirmemiz gerektiği, haftalık ve günlük ders çalışma sürecimizi nasıl planlayacağımız konusunda çalışmalar yapıyorum. Bu süreçte sizleri tanıyarak bu sınav yolculuğunda süreci daha doğru yürütmek adına neler yapabileceğimizi planlayarak süreci beraber yürüteceğiz. Hedeflerine doğru ilerlediğiniz bu zorlu yolculukta yalnız olmadığınızı bilmenizi ve bu süreçte sizlerin her adımınızda yanınızda olmaktan mutluluk duyacağı belirtmek isterim.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="mentor4Modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Nazile Akkaya</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>Merhaba, ben Nazile Akkaya. Karabük üniversitesi'nde tıp öğrencisiyim. 2025 YKS'de sayısal alanda 24.913 sıralama yaptım ve hayalim olan tıp fakültesine yerleştim. Sınav süreci; zor, süreklilik gerektiren, ara ara inişleri çıkışları olan ve mental olarak yorucu bir süreç. Sınav sürecinde en önemli şey sizin kendinize olan güveniniz ve kararlılığınız. Bunun yanında birlikte size uygun olan bir plan hazırladığımız ve sınav sürecini iyi yönettiğimiz takdirde çok iyi sonuç alacağız. Bu süreçte yanınızda hep bir destekçiniz olmak ve süreci en verimli şekilde geçirmeniz için yardımcı olmak isterim. Hepimiz, sizin hedeflerinize ulaşabilmeniz için elimizden geleni yapacağız.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
