@@ -11,4 +11,3 @@
 
 -Mentör profilleri, hizmet açıklamaları ve iletişim formu.
 
-Mit Lisana.
