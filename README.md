@@ -10,3 +10,5 @@
 -Temiz ve anlaşılır kullanıcı deneyimi,
 
 -Mentör profilleri, hizmet açıklamaları ve iletişim formu.
+
+Mit Lisana.
