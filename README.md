@@ -9,5 +9,4 @@
 
 -Temiz ve anlaşılır kullanıcı deneyimi,
 
--Mentör profilleri, hizmet açıklamaları ve iletişim formu 
-
+-Mentör profilleri, hizmet açıklamaları ve iletişim formu.
